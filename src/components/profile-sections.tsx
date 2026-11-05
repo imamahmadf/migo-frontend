@@ -25,28 +25,40 @@ export function AboutSection({ heading = "h2" }: { heading?: HeadingLevel }) {
     <section id="tentang" className="scroll-mt-24 bg-white">
       <div className="mx-auto grid w-full max-w-6xl items-start gap-12 px-6 py-20 lg:grid-cols-[1.15fr_0.85fr]">
         <Reveal>
-          <SectionHeading as={heading} className="max-w-xl text-3xl font-extrabold tracking-tight text-balance sm:text-4xl">
+          <SectionHeading
+            as={heading}
+            className="max-w-xl text-3xl font-extrabold tracking-tight text-balance sm:text-4xl"
+          >
             Hiburan dan pendidikan digital tidak boleh jadi barang mewah
           </SectionHeading>
           <div className="mt-6 max-w-xl space-y-4 text-[15px] leading-7 text-slate-500">
             <p>
-              Bagi jutaan keluarga di Indonesia, menonton satu film secara streaming bisa menghabiskan kuota untuk seminggu.
-              Akibatnya, konten berkualitas hanya dinikmati mereka yang mampu membayar data mahal.
+              Bagi jutaan keluarga di Indonesia, menonton satu film secara
+              streaming bisa menghabiskan kuota untuk seminggu. Akibatnya,
+              konten berkualitas hanya dinikmati mereka yang mampu membayar data
+              mahal.
             </p>
             <p>
-              Migo memindahkan distribusi konten dari jaringan seluler ke warung di lingkungan sekitar. Melalui perangkat Migo
-              Download Station (MDS), siapa pun dapat mengunduh konten dalam hitungan detik — lalu menontonnya kapan saja,
-              offline.
+              Migo memindahkan distribusi konten dari jaringan seluler ke warung
+              di lingkungan sekitar. Melalui perangkat Migo Download Station
+              (MDS), siapa pun dapat mengunduh konten dalam hitungan detik —
+              lalu menontonnya kapan saja, offline.
             </p>
           </div>
         </Reveal>
         <Reveal delay={80} className="lg:pt-2">
-          <p className="text-sm text-slate-500">Waktu unduh satu film full HD di warung Migo</p>
-          <p className="mt-3 text-5xl font-extrabold tracking-tight text-[#e30b29] sm:text-6xl">30–60 dtk</p>
+          <p className="text-sm text-slate-500">
+            Waktu unduh satu film full HD di warung Migo
+          </p>
+          <p className="mt-3 text-5xl font-extrabold tracking-tight text-[#e30b29] sm:text-6xl">
+            30–60 dtk
+          </p>
           <div className="mt-8 grid grid-cols-2 gap-6 border-t border-slate-200 pt-6">
             <div>
               <p className="text-2xl font-bold">0 MB</p>
-              <p className="mt-1 text-sm text-slate-500">kuota seluler terpakai</p>
+              <p className="mt-1 text-sm text-slate-500">
+                kuota seluler terpakai
+              </p>
             </div>
             <div>
               <p className="text-2xl font-bold">Offline</p>
@@ -70,10 +82,15 @@ export function StepsSection({
     <section id="cara-kerja" className="scroll-mt-24 bg-[#f6f7f9]">
       <div className="mx-auto grid w-full max-w-6xl items-center gap-12 px-6 py-20 lg:grid-cols-[0.9fr_1.1fr]">
         <Reveal>
-          <SectionHeading as={heading} className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+          <SectionHeading
+            as={heading}
+            className="text-3xl font-extrabold tracking-tight sm:text-4xl"
+          >
             Cara Kerja Ekosistem Migo
           </SectionHeading>
-          <p className="mt-3 text-slate-500">Empat langkah sederhana, dari warung ke layar ponsel pelanggan.</p>
+          <p className="mt-3 text-slate-500">
+            Empat langkah sederhana, dari warung ke layar ponsel pelanggan.
+          </p>
           <img
             src={profile.stepsImage || "/warungmigo.png"}
             alt="Ilustrasi warung mitra Migo"
@@ -92,7 +109,9 @@ export function StepsSection({
               <h3 className="mt-4 font-bold">
                 {index + 1}. {step.title}
               </h3>
-              <p className="mt-2 text-sm leading-6 text-slate-500">{step.body}</p>
+              <p className="mt-2 text-sm leading-6 text-slate-500">
+                {step.body}
+              </p>
             </Reveal>
           ))}
         </ol>
@@ -106,20 +125,29 @@ export function CatalogSection({ heading = "h2" }: { heading?: HeadingLevel }) {
     <section id="konten" className="scroll-mt-24 bg-white">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-20 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
         <Reveal>
-          <SectionHeading as={heading} className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+          <SectionHeading
+            as={heading}
+            className="text-3xl font-extrabold tracking-tight sm:text-4xl"
+          >
             Konten yang tersedia
           </SectionHeading>
           <p className="mt-3 max-w-xs text-sm leading-6 text-slate-500">
-            Katalog diperbarui setiap minggu dan dikirim ke seluruh perangkat MDS secara otomatis.
+            Katalog diperbarui setiap minggu dan dikirim ke seluruh perangkat
+            MDS secara otomatis.
           </p>
         </Reveal>
         <div className="flex flex-col">
           {catalog.map((item) => (
-            <Reveal key={item.title} className="flex gap-4 border-b border-slate-200 py-6 first:pt-0">
+            <Reveal
+              key={item.title}
+              className="flex gap-4 border-b border-slate-200 py-6 first:pt-0"
+            >
               <span className="mt-0.5 text-[#e30b29]">{item.icon}</span>
               <div>
                 <h3 className="font-bold">{item.title}</h3>
-                <p className="mt-1 max-w-xl text-sm leading-6 text-slate-500">{item.body}</p>
+                <p className="mt-1 max-w-xl text-sm leading-6 text-slate-500">
+                  {item.body}
+                </p>
               </div>
             </Reveal>
           ))}
@@ -134,11 +162,15 @@ export function PartnerSection({ heading = "h2" }: { heading?: HeadingLevel }) {
     <section id="kemitraan" className="scroll-mt-24 bg-[#e30b29] text-white">
       <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-6 py-16 lg:grid-cols-2">
         <Reveal>
-          <SectionHeading as={heading} className="max-w-md text-3xl font-extrabold tracking-tight text-balance sm:text-4xl">
+          <SectionHeading
+            as={heading}
+            className="max-w-md text-3xl font-extrabold tracking-tight text-balance sm:text-4xl"
+          >
             Jadikan warung Anda pusat hiburan di lingkungan
           </SectionHeading>
           <p className="mt-4 max-w-md text-sm leading-6 text-white/85">
-            Bergabunglah sebagai Warung Mitra Migo. Tanpa biaya pemasangan, tanpa perlu keahlian teknis.
+            Bergabunglah sebagai Warung Mitra Migo. Tanpa biaya pemasangan,
+            tanpa perlu keahlian teknis.
           </p>
           <a
             href="/kontak"
@@ -150,7 +182,10 @@ export function PartnerSection({ heading = "h2" }: { heading?: HeadingLevel }) {
         </Reveal>
         <ul className="flex flex-col">
           {partnerBenefits.map((item) => (
-            <li key={item} className="flex gap-3 border-b border-white/25 py-4 text-sm leading-6 last:border-b-0">
+            <li
+              key={item}
+              className="flex gap-3 border-b border-white/25 py-4 text-sm leading-6 last:border-b-0"
+            >
               <CheckIcon />
               <span>{item}</span>
             </li>
@@ -172,11 +207,15 @@ export function ContactSection({
     <section id="kontak" className="scroll-mt-24 bg-white">
       <div className="mx-auto grid w-full max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[0.8fr_1.2fr]">
         <Reveal>
-          <SectionHeading as={heading} className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+          <SectionHeading
+            as={heading}
+            className="text-3xl font-extrabold tracking-tight sm:text-4xl"
+          >
             Hubungi kami
           </SectionHeading>
           <p className="mt-4 max-w-sm text-sm leading-6 text-slate-500">
-            Untuk kemitraan warung, kerja sama konten, atau investasi. Tim kami membalas dalam satu hari kerja.
+            Untuk kemitraan warung, kerja sama konten, atau investasi. Tim kami
+            membalas dalam satu hari kerja.
           </p>
           <ul className="mt-8 flex flex-col gap-5 text-sm">
             <li className="flex gap-3">
@@ -184,7 +223,7 @@ export function ContactSection({
               <span>
                 <span className="block text-slate-500">Email</span>
                 <a href="mailto:halo@migo.id" className="font-semibold">
-                  halo@migo.id
+                  halo@migo.tech
                 </a>
               </span>
             </li>
@@ -201,7 +240,9 @@ export function ContactSection({
               <PinIcon />
               <span>
                 <span className="block text-slate-500">Kantor Pusat</span>
-                <span className="font-semibold">{profile.locality}, Indonesia</span>
+                <span className="font-semibold">
+                  {profile.locality}, Indonesia
+                </span>
               </span>
             </li>
           </ul>
@@ -214,13 +255,27 @@ export function ContactSection({
   );
 }
 
-export function FaqSection({ faqs, heading = "h2" }: { faqs: FaqItem[]; heading?: HeadingLevel }) {
+export function FaqSection({
+  faqs,
+  heading = "h2",
+}: {
+  faqs: FaqItem[];
+  heading?: HeadingLevel;
+}) {
   return (
-    <section id="faq" className="scroll-mt-24 border-t border-slate-200 bg-white">
+    <section
+      id="faq"
+      className="scroll-mt-24 border-t border-slate-200 bg-white"
+    >
       <div className="mx-auto w-full max-w-6xl px-6 py-20">
         <Reveal>
-          <p className="text-xs font-semibold tracking-[0.18em] text-[#e30b29] uppercase">Pertanyaan umum</p>
-          <SectionHeading as={heading} className="mt-3 text-3xl font-extrabold tracking-tight">
+          <p className="text-xs font-semibold tracking-[0.18em] text-[#e30b29] uppercase">
+            Pertanyaan umum
+          </p>
+          <SectionHeading
+            as={heading}
+            className="mt-3 text-3xl font-extrabold tracking-tight"
+          >
             FAQ
           </SectionHeading>
         </Reveal>
@@ -235,7 +290,14 @@ const catalog = [
     title: "Film & Serial",
     body: "Film Indonesia dan internasional berlisensi resmi, serial, serta tayangan anak dengan kualitas full HD.",
     icon: (
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+      <svg
+        viewBox="0 0 24 24"
+        className="h-5 w-5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        aria-hidden="true"
+      >
         <rect x="3" y="5" width="18" height="14" rx="2" />
         <path d="M8 5v14M16 5v14M3 9h5M16 9h5M3 15h5M16 15h5" />
       </svg>
@@ -245,7 +307,14 @@ const catalog = [
     title: "Materi Pembelajaran",
     body: "Video pelajaran sekolah, kursus keterampilan, dan konten literasi digital yang bisa diputar ulang tanpa biaya data.",
     icon: (
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+      <svg
+        viewBox="0 0 24 24"
+        className="h-5 w-5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        aria-hidden="true"
+      >
         <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
         <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
       </svg>
@@ -269,9 +338,22 @@ function StepIcon({ index }: { index: number }) {
     "M8 6.5v11l10-5.5-10-5.5z",
   ];
   return (
-    <span className={`inline-flex h-10 w-10 items-center justify-center rounded-xl ${navy ? "bg-[#141b2d]" : "bg-[#e30b29]"} text-white`}>
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-        <path d={paths[index % paths.length]} strokeLinecap="round" strokeLinejoin="round" />
+    <span
+      className={`inline-flex h-10 w-10 items-center justify-center rounded-xl ${navy ? "bg-[#141b2d]" : "bg-[#e30b29]"} text-white`}
+    >
+      <svg
+        viewBox="0 0 24 24"
+        className="h-5 w-5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        aria-hidden="true"
+      >
+        <path
+          d={paths[index % paths.length]}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
     </span>
   );
@@ -279,15 +361,33 @@ function StepIcon({ index }: { index: number }) {
 
 function CheckIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-      <path d="M5 12.5 10 17l9-10" strokeLinecap="round" strokeLinejoin="round" />
+    <svg
+      viewBox="0 0 24 24"
+      className="mt-0.5 h-5 w-5 shrink-0"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      aria-hidden="true"
+    >
+      <path
+        d="M5 12.5 10 17l9-10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
 
 function MailIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-[#e30b29]" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+    <svg
+      viewBox="0 0 24 24"
+      className="mt-0.5 h-5 w-5 shrink-0 text-[#e30b29]"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      aria-hidden="true"
+    >
       <rect x="3" y="5" width="18" height="14" rx="2" />
       <path d="m4 7 8 6 8-6" />
     </svg>
@@ -296,15 +396,32 @@ function MailIcon() {
 
 function PhoneIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-[#e30b29]" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-      <path d="M8 3h3l1.5 4-2 1.5a12 12 0 0 0 5 5L17 12l4 1.5V17a2 2 0 0 1-2 2A15 15 0 0 1 5 5a2 2 0 0 1 2-2z" strokeLinejoin="round" />
+    <svg
+      viewBox="0 0 24 24"
+      className="mt-0.5 h-5 w-5 shrink-0 text-[#e30b29]"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      aria-hidden="true"
+    >
+      <path
+        d="M8 3h3l1.5 4-2 1.5a12 12 0 0 0 5 5L17 12l4 1.5V17a2 2 0 0 1-2 2A15 15 0 0 1 5 5a2 2 0 0 1 2-2z"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
 
 function PinIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-[#e30b29]" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+    <svg
+      viewBox="0 0 24 24"
+      className="mt-0.5 h-5 w-5 shrink-0 text-[#e30b29]"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      aria-hidden="true"
+    >
       <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" />
       <circle cx="12" cy="10" r="2.2" />
     </svg>
