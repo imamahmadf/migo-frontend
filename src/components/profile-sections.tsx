@@ -232,7 +232,7 @@ export function ContactSection({
               <span>
                 <span className="block text-slate-500">WhatsApp</span>
                 <a href="https://wa.me/6281100006446" className="font-semibold">
-                  +62 811 0000 6446
+                  +62 -
                 </a>
               </span>
             </li>
