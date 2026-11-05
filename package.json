@@ -9,9 +9,11 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "formik": "^2.4.9",
     "next": "16.4.5",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
@@ -20,7 +22,11 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.5",
+    "magic-string": "0.30.21",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "overrides": {
+    "magic-string": "0.30.21"
   }
 }
